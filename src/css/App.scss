@@ -1,0 +1,32 @@
+$blue: #00A1E4;
+$pale-yellow: #FFFFCC;
+$white: #F5F5F5;
+$light-gray: #fff;
+$gray: #cdcdcd;
+$dark-gray: #6D696A;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Verdana, Arial, "Open Sans", sans-serif;
+}
+
+h2 {
+    margin-top: 15px;
+    font-size: 20px;
+    &.title {
+        font-size: 24px;
+    }
+}
+
+p, li, a, span {
+    font-size: 15px;
+    line-height: 1.3;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@import "./modules/responsive/mobile";
+@import "./modules/responsive/desktop";

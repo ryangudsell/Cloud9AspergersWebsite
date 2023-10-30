@@ -1,0 +1,85 @@
+@media screen and (min-width: 1024px) {
+.desktop {display: block!important;}
+.mobile {display: none!important;}
+
+header {
+    nav {
+        &.desktop {display: flex!important;}
+        ul {
+            position: static;
+
+            display: inline-flex;
+            flex-direction: row;
+            gap: 15px;
+
+            background-color: rgba(0,0,0,0);
+            width: auto;
+            height: auto;
+            text-align: right;
+
+            li a {
+                cursor: pointer;
+                font-size: 16px;
+                padding: 0;
+                &.link-active {
+                    border-bottom: 2px $white dashed;
+                }
+
+                svg {
+                    font-size: 14px;
+                    margin-left: 5px;
+                }
+
+                line-height: 1;
+            }
+
+            div {
+                position: relative;
+                padding: 0;
+                margin: 0 -8px;
+
+                ul {
+                    position: absolute;
+                    top: 30px;
+                    left: 0;
+
+                    background-color: $light-gray;
+                    padding: 5px 0;
+
+                    flex-direction: column;
+                    text-align: left;
+                    align-items: flex-start;
+                    gap: 5px;
+
+                    li {
+                        cursor: pointer;
+                        padding: 10px;
+                        margin: 0;
+                        width: 100%;
+                        a {
+                            color: $dark-gray;
+                            width: 100%;
+                        }
+
+                        &:active, &:hover, &:focus {
+                            background-color: $gray;
+                            color: $light-gray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    display: block;
+    padding: 20px 30px;
+
+    p {
+        text-align: left;
+        display: block;
+    }
+}
+
+}
