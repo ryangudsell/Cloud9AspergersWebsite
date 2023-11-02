@@ -13,6 +13,19 @@ const Event = () => {
     return tempElement.textContent || tempElement.innerText;
   }
 
+  function getKeywords(acf) {
+    if (!acf) {return}
+
+    let keywords = []
+    if (acf.keyword1) keywords.push(acf.keyword1);
+    if (acf.keyword2) keywords.push(acf.keyword2);
+    if (acf.keyword3) keywords.push(acf.keyword3);
+    if (acf.keyword4) keywords.push(acf.keyword4);
+    if (acf.keyword5) keywords.push(acf.keyword5);
+    
+    return keywords.join(", ");
+  }
+
   const [event, setEvent] = useState(null)
   const [loading, setLoading] = useState(true)
   const {id} = useParams()
@@ -37,6 +50,7 @@ const Event = () => {
         <title>Cloud 9 Asperger's/ASD Foundation</title>
         <meta name="title" content={`Cloud 9 Asperger's/ASD Foundation || ${event?.title.rendered}`} />
         <meta name="description" content={`Hello and welcome to the site of the Cloud 9 Children’s Foundation! ${stripHTMLTags(event?.excerpt.rendered)}`} />
+        <meta name="keywords" content={`${getKeywords(event?.acf)}`}/>
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />

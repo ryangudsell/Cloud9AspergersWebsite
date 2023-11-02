@@ -12,7 +12,7 @@ const Product = () => {
     tempElement.innerHTML = string;
     return tempElement.textContent || tempElement.innerText;
   }
-
+  
   const [product, setProduct] = useState(null)
   const [loading, setLoading] = useState(true)
 
@@ -37,6 +37,7 @@ const Product = () => {
         <title>Cloud 9 Asperger's/ASD Foundation</title>
         <meta name="title" content={`Cloud 9 Asperger's/ASD Foundation || ${product?.name}`} />
         <meta name="description" content={`Hello and welcome to the site of the Cloud 9 Children’s Foundation! ${stripHTMLTags(product?.description)}`} />
+        <meta name="keywords" content={`Donation, General, Product`}/>
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
